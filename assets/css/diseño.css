@@ -1,0 +1,138 @@
+:root {
+--gold:#e8ddb2;
+--ink:#fff9e8;
+--muted:#c9c09d;
+--line:#f4e7b72b
+}
+
+* {
+box-sizing:border-box
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+margin:0;
+background:#100401;
+color:var(--ink);
+font-family:Manrope,sans-serif
+}
+
+a {
+color:inherit;
+text-decoration:none
+}
+
+.top {
+height:78px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 7vw;
+border-bottom:1px solid var(--line);
+font-family:Cinzel,serif
+}
+
+.top b {
+font-size:1.05rem;
+letter-spacing:.05em
+}
+
+.top a {
+font-size:.7rem;
+color:var(--gold);
+letter-spacing:.1em
+}
+
+.hero {
+min-height:590px;
+display:grid;
+place-items:center;
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(#0009,#000b),url('../img/banner_v2_fondo.jpg') center/cover
+}
+
+.hero h1 {
+font:700 clamp(3rem,7vw,6.5rem)/1 Cinzel,serif;
+color:var(--gold);
+margin:0
+}
+
+.hero p {
+color:var(--muted);
+max-width:560px;
+line-height:1.75;
+margin:25px auto 35px
+}
+
+.button {
+display:inline-block;
+padding:15px 28px;
+background:var(--gold);
+color:#291107;
+font-size:.75rem;
+font-weight:800;
+text-transform:uppercase;
+letter-spacing:.08em
+}
+
+.works {
+padding:100px 7vw
+}
+
+.works h2 {
+font:700 clamp(2rem,4vw,3.5rem) Cinzel,serif;
+color:var(--gold);
+margin:0 0 45px
+}
+
+.grid {
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px
+}
+
+.card {
+border:1px solid var(--line);
+padding:16px
+}
+
+.card img {
+width:100%;
+height:220px;
+object-fit:cover
+}
+
+.card small {
+display:block;
+color:var(--gold);
+font-family:Cinzel,serif;
+letter-spacing:.1em;
+margin-top:18px
+}
+
+.card h3 {
+font:700 1.25rem Cinzel,serif;
+margin:10px 0;
+color:var(--ink)
+}
+
+.card p {
+font-size:.85rem;
+color:var(--muted);
+line-height:1.65
+}
+
+/*------------------------------------*/
+
+@media(max-width:700px) {
+.grid {
+grid-template-columns:1fr
+}
+.hero {
+min-height:500px
+}
+}
